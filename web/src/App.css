@@ -329,20 +329,27 @@ select:focus {
 
 .correct {
   background: #538d4e;
-
   border-color: #538d4e;
 }
 
 .present {
   background: #b59f3b;
-
   border-color: #b59f3b;
 }
 
 .absent {
   background: #3a3a3c;
-
   border-color: #3a3a3c;
+}
+
+.invalid-row {
+  animation: shake 0.25s ease-in-out;
+}
+
+.invalid-tile {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.22);
+  color: #fecaca;
 }
 
 .keyboard {
@@ -393,6 +400,18 @@ select:focus {
   font-size: 0.78rem;
 }
 
+.key.correct {
+  background: #538d4e;
+}
+
+.key.present {
+  background: #b59f3b;
+}
+
+.key.absent {
+  background: #3a3a3c;
+}
+
 .message {
   text-align: center;
 
@@ -401,8 +420,8 @@ select:focus {
   font-weight: 700;
 }
 
-.seo-box {
-  display: none;
+.message.error {
+  color: #fca5a5;
 }
 
 .modal-backdrop {
@@ -526,6 +545,28 @@ select:focus {
 
 .stat strong {
   font-size: 1.05rem;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-6px);
+  }
+
+  50% {
+    transform: translateX(6px);
+  }
+
+  75% {
+    transform: translateX(-4px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @media (max-width: 560px) {

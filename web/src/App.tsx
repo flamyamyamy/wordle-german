@@ -3,35 +3,14 @@ import './App.css'
 
 import { getDailyWord } from './game/daily'
 import type { CEFRLevel } from './game/types'
-import { validateGuess } from './game/validateGuess'
-import {
-  getRandomWord,
-  isValidWord,
-  normalizeWord
-} from './game/wordUtils'
-
+import { validateGuess, type TileState } from './game/validateGuess'
+import { getRandomWord, isValidWord, normalizeWord } from './game/wordUtils'
 import { setupDiscordAuth } from './discord'
 
-type GameMode =
-  | 'Heute'
-  | 'Training'
-  | 'Zufall'
-  | 'Wörterbuch'
+type GameMode = 'Heute' | 'Training' | 'Zufall' | 'Wörterbuch'
 
-const MODES: GameMode[] = [
-  'Heute',
-  'Training',
-  'Zufall',
-  'Wörterbuch'
-]
-
-const LEVELS: CEFRLevel[] = [
-  'A1',
-  'A2',
-  'B1',
-  'B2',
-  'C1'
-]
+const MODES: GameMode[] = ['Heute', 'Training', 'Zufall', 'Wörterbuch']
+const LEVELS: CEFRLevel[] = ['A1', 'A2', 'B1', 'B2', 'C1']
 
 const KEYBOARD = [
   ['q', 'w', 'e', 'r', 't', 'z', 'u', 'i', 'o', 'p'],
@@ -40,144 +19,128 @@ const KEYBOARD = [
 ]
 
 function App() {
-  const [discordUser, setDiscordUser] =
-    useState<any>(null)
+  const [discordUser, setDiscordUser] = useState<any>(null)
 
-  const [mode, setMode] =
-    useState<GameMode>('Heute')
-
-  const [level, setLevel] =
-    useState<CEFRLevel>('A1')
+  const [mode, setMode] = useState<GameMode>('Heute')
+  const [level, setLevel] = useState<CEFRLevel>('A1')
 
   const [guess, setGuess] = useState('')
+  const [guesses, setGuesses] = useState<string[]>([])
+  const [results, setResults] = useState<TileState[][]>([])
 
-  const [guesses, setGuesses] =
-    useState<string[]>([])
+  const [message, setMessage] = useState('')
+  const [invalidGuess, setInvalidGuess] = useState(false)
+  const [gameOver, setGameOver] = useState(false)
 
-  const [results, setResults] =
-    useState<string[][]>([])
-
-  const [message, setMessage] =
-    useState('')
-
-  const [showProgress, setShowProgress] =
-    useState(false)
-
-  const [randomSeed, setRandomSeed] =
-    useState(0)
+  const [showProgress, setShowProgress] = useState(false)
+  const [randomSeed, setRandomSeed] = useState(0)
 
   useEffect(() => {
     setupDiscordAuth()
       .then((user) => {
-        if (user) {
-          setDiscordUser(user)
-        }
+        if (user) setDiscordUser(user)
       })
       .catch(console.error)
   }, [])
 
   const targetWord = useMemo(() => {
-    if (mode === 'Heute') {
-      return getDailyWord(level, 5)
-    }
-
+    if (mode === 'Heute') return getDailyWord(level, 5)
     return getRandomWord(level, 5)
   }, [mode, level, randomSeed])
 
-  function resetGame(
-    nextMode = mode,
-    nextLevel = level
-  ) {
+  const keyboardStates = useMemo(() => {
+    const states: Record<string, TileState> = {}
+
+    guesses.forEach((word, rowIndex) => {
+      word.split('').forEach((letter, colIndex) => {
+        const state = results[rowIndex]?.[colIndex]
+        const oldState = states[letter]
+
+        if (state === 'correct') {
+          states[letter] = 'correct'
+        } else if (state === 'present' && oldState !== 'correct') {
+          states[letter] = 'present'
+        } else if (!oldState) {
+          states[letter] = 'absent'
+        }
+      })
+    })
+
+    return states
+  }, [guesses, results])
+
+  function resetGame(nextMode = mode, nextLevel = level) {
     setMode(nextMode)
     setLevel(nextLevel)
-
     setGuess('')
     setGuesses([])
     setResults([])
     setMessage('')
-
-    setRandomSeed((v) => v + 1)
+    setInvalidGuess(false)
+    setGameOver(false)
+    setRandomSeed((value) => value + 1)
   }
 
   function submitGuess() {
-    const cleanGuess =
-      normalizeWord(guess)
+    if (gameOver) return
 
-    const target =
-      normalizeWord(targetWord.word)
+    const cleanGuess = normalizeWord(guess)
+    const target = normalizeWord(targetWord.word)
 
-    if (
-      cleanGuess.length !==
-      target.length
-    ) {
-      setMessage(
-        `Das Wort muss ${target.length} Buchstaben haben.`
-      )
-
+    if (cleanGuess.length !== target.length) {
+      setInvalidGuess(true)
+      setMessage(`Das Wort muss ${target.length} Buchstaben haben.`)
       return
     }
 
     if (!isValidWord(cleanGuess)) {
-      setMessage(
-        'Dieses Wort ist nicht in der Wörtle-Liste.'
-      )
-
+      setInvalidGuess(true)
+      setMessage('Dieses Wort ist nicht in der Wörtle-Liste.')
       return
     }
 
-    const validation =
-      validateGuess(
-        cleanGuess,
-        target
-      )
+    const validation = validateGuess(cleanGuess, target)
 
-    const nextGuesses = [
-      ...guesses,
-      cleanGuess
-    ]
-
-    const nextResults = [
-      ...results,
-      validation
-    ]
+    const nextGuesses = [...guesses, cleanGuess]
+    const nextResults = [...results, validation]
 
     setGuesses(nextGuesses)
     setResults(nextResults)
-
     setGuess('')
+    setInvalidGuess(false)
 
     if (cleanGuess === target) {
       setMessage('Richtig! 🎉')
-    } else if (
-      nextGuesses.length === 6
-    ) {
-      setMessage(
-        `Verloren. Das Wort war: ${targetWord.word}`
-      )
-    } else {
-      setMessage('')
+      setGameOver(true)
+      return
     }
+
+    if (nextGuesses.length === 6) {
+      setMessage(`Verloren. Das Wort war: ${targetWord.word}`)
+      setGameOver(true)
+      return
+    }
+
+    setMessage('')
   }
 
   function pressKey(key: string) {
+    if (gameOver) return
+
+    setInvalidGuess(false)
+
     if (key === 'Enter') {
       submitGuess()
       return
     }
 
     if (key === '⌫') {
-      setGuess((v) =>
-        v.slice(0, -1)
-      )
-
+      setGuess((value) => value.slice(0, -1))
       return
     }
 
-    if (
-      guess.length <
-      targetWord.word.length
-    ) {
-      setGuess((v) => v + key)
+    if (guess.length < targetWord.word.length) {
+      setGuess((value) => value + key)
     }
   }
 
@@ -204,9 +167,7 @@ function App() {
 
           <button
             className="progress-button"
-            onClick={() =>
-              setShowProgress(true)
-            }
+            onClick={() => setShowProgress(true)}
           >
             Dein Fortschritt
           </button>
@@ -218,12 +179,10 @@ function App() {
           Wordle Deutsch · German Wordle Game
         </p>
 
-        <h1>Play Wörtle</h1>
+        <h1>Wörtle</h1>
 
         <p className="hero-text">
-          Das kostenlose tägliche Wortspiel
-          für Deutschlernende und
-          Muttersprachler.
+          Das kostenlose tägliche Wortspiel für Deutschlernende und Muttersprachler.
         </p>
 
         <div className="chips">
@@ -237,22 +196,14 @@ function App() {
         <div className="controls-row">
           <label>
             Modus
-
             <select
               value={mode}
-              onChange={(e) =>
-                resetGame(
-                  e.target
-                    .value as GameMode,
-                  level
-                )
+              onChange={(event) =>
+                resetGame(event.target.value as GameMode, level)
               }
             >
               {MODES.map((item) => (
-                <option
-                  key={item}
-                  value={item}
-                >
+                <option key={item} value={item}>
                   {item}
                 </option>
               ))}
@@ -261,22 +212,14 @@ function App() {
 
           <label>
             Level
-
             <select
               value={level}
-              onChange={(e) =>
-                resetGame(
-                  mode,
-                  e.target
-                    .value as CEFRLevel
-                )
+              onChange={(event) =>
+                resetGame(mode, event.target.value as CEFRLevel)
               }
             >
               {LEVELS.map((item) => (
-                <option
-                  key={item}
-                  value={item}
-                >
+                <option key={item} value={item}>
                   {item}
                 </option>
               ))}
@@ -285,111 +228,75 @@ function App() {
         </div>
 
         <p className="game-info">
-          Modus: <b>{mode}</b> · Level:{' '}
-          <b>{targetWord.level}</b>
+          Modus: <b>{mode}</b> · Level: <b>{targetWord.level}</b>
         </p>
 
         <div className="board">
-          {Array.from({
-            length: 6
-          }).map((_, rowIndex) => {
-            const rowGuess =
-              guesses[rowIndex] || ''
-
-            const rowResult =
-              results[rowIndex] || []
-
-            const isCurrentRow =
-              rowIndex ===
-              guesses.length
+          {Array.from({ length: 6 }).map((_, rowIndex) => {
+            const rowGuess = guesses[rowIndex] || ''
+            const rowResult = results[rowIndex] || []
+            const isCurrentRow = rowIndex === guesses.length
 
             return (
               <div
                 key={rowIndex}
-                className="row"
+                className={`row ${
+                  invalidGuess && isCurrentRow ? 'invalid-row' : ''
+                }`}
               >
-                {Array.from({
-                  length:
-                    targetWord.word.length
-                }).map(
-                  (_, colIndex) => {
-                    const letter =
-                      rowGuess[
-                        colIndex
-                      ] ||
-                      (isCurrentRow
-                        ? guess[
-                            colIndex
-                          ]
-                        : '') ||
-                      ''
+                {Array.from({ length: targetWord.word.length }).map((_, colIndex) => {
+                  const letter =
+                    rowGuess[colIndex] ||
+                    (isCurrentRow ? guess[colIndex] : '') ||
+                    ''
 
-                    const state =
-                      rowResult[
-                        colIndex
-                      ] || ''
+                  const state = rowResult[colIndex] || ''
 
-                    return (
-                      <div
-                        key={colIndex}
-                        className={`tile ${state}`}
-                      >
-                        {letter}
-                      </div>
-                    )
-                  }
-                )}
+                  return (
+                    <div
+                      key={colIndex}
+                      className={`tile ${state} ${
+                        invalidGuess && isCurrentRow && letter
+                          ? 'invalid-tile'
+                          : ''
+                      }`}
+                    >
+                      {letter}
+                    </div>
+                  )
+                })}
               </div>
             )
           })}
         </div>
 
         <div className="keyboard">
-          {KEYBOARD.map(
-            (row, rowIndex) => (
-              <div
-                key={rowIndex}
-                className="keyboard-row"
-              >
-                {row.map((key) => (
+          {KEYBOARD.map((row, rowIndex) => (
+            <div key={rowIndex} className="keyboard-row">
+              {row.map((key) => {
+                const keyState = keyboardStates[key]
+
+                return (
                   <button
                     key={key}
                     className={`key ${
-                      key ===
-                        'Enter' ||
-                      key === '⌫'
-                        ? 'wide'
-                        : ''
-                    }`}
-                    onClick={() =>
-                      pressKey(key)
-                    }
+                      key === 'Enter' || key === '⌫' ? 'wide' : ''
+                    } ${keyState || ''}`}
+                    onClick={() => pressKey(key)}
                   >
                     {key}
                   </button>
-                ))}
-              </div>
-            )
-          )}
+                )
+              })}
+            </div>
+          ))}
         </div>
 
         {message && (
-          <p className="message">
+          <p className={`message ${invalidGuess ? 'error' : ''}`}>
             {message}
           </p>
         )}
-      </section>
-
-      <section className="seo-box">
-        <h2>Wordle auf Deutsch</h2>
-
-        <p>
-          Wörtle ist ein kostenloses
-          deutsches Wordle-Spiel mit
-          täglichen Rätseln,
-          CEFR-Leveln und
-          Trainingsmodi.
-        </p>
       </section>
 
       {showProgress && (
@@ -397,16 +304,12 @@ function App() {
           <div className="modal">
             <button
               className="close"
-              onClick={() =>
-                setShowProgress(false)
-              }
+              onClick={() => setShowProgress(false)}
             >
               ×
             </button>
 
-            <h2>
-              Dein Fortschritt
-            </h2>
+            <h2>Dein Fortschritt</h2>
 
             <p className="modal-subtitle">
               Deine Statistiken
@@ -420,63 +323,38 @@ function App() {
 
             <div className="stats-grid">
               <div className="stat">
-                <span>
-                  Aktuelle Serie
-                </span>
-
-                <strong>
-                  0 Tage
-                </strong>
+                <span>Aktuelle Serie</span>
+                <strong>0 Tage</strong>
               </div>
 
               <div className="stat">
-                <span>
-                  Gewinnrate
-                </span>
-
+                <span>Gewinnrate</span>
                 <strong>0%</strong>
               </div>
 
               <div className="stat">
-                <span>
-                  Spiele gesamt
-                </span>
-
+                <span>Spiele gesamt</span>
                 <strong>0</strong>
               </div>
 
               <div className="stat">
-                <span>
-                  Siege gesamt
-                </span>
-
+                <span>Siege gesamt</span>
                 <strong>0</strong>
               </div>
 
               <div className="stat">
-                <span>
-                  Längste Serie
-                </span>
-
-                <strong>
-                  0 Tage
-                </strong>
+                <span>Längste Serie</span>
+                <strong>0 Tage</strong>
               </div>
 
               <div className="stat">
-                <span>
-                  Zuletzt gespielt
-                </span>
-
+                <span>Zuletzt gespielt</span>
                 <strong>Nie</strong>
               </div>
             </div>
 
             <div className="info-box">
-              Regelmäßiges Spielen
-              verbessert die
-              Worterkennung und den
-              Wortschatz!
+              Regelmäßiges Spielen verbessert die Worterkennung und den Wortschatz!
             </div>
           </div>
         </div>
