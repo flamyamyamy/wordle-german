@@ -1,45 +1,42 @@
 import { DiscordSDK } from '@discord/embedded-app-sdk'
 
-const clientId =
-  import.meta.env.VITE_DISCORD_CLIENT_ID
+const clientId = import.meta.env.VITE_DISCORD_CLIENT_ID
+const apiUrl = import.meta.env.VITE_API_URL
 
-let discordSdk: DiscordSDK | null = null
+export const discordSdk = new DiscordSDK(clientId)
 
-export async function setupDiscord() {
+export async function setupDiscordAuth() {
   const isDiscordActivity =
-    window.location.search.includes(
-      'frame_id'
-    )
+    window.location.search.includes('frame_id')
 
   if (!isDiscordActivity) {
-    console.log(
-      'Running outside Discord'
-    )
-
-    return
+    console.log('Running outside Discord')
+    return null
   }
 
-  if (!clientId) {
-    console.log(
-      'Missing Discord Client ID'
-    )
+  await discordSdk.ready()
 
-    return
-  }
+  const { code } = await discordSdk.commands.authorize({
+    client_id: clientId,
+    response_type: 'code',
+    state: '',
+    prompt: 'none',
+    scope: ['identify']
+  })
 
-  try {
-    discordSdk = new DiscordSDK(
-      clientId
-    )
+  const response = await fetch(`${apiUrl}/api/discord/token`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ code })
+  })
 
-    await discordSdk.ready()
+  const data = await response.json()
 
-    console.log(
-      'Discord Activity Ready'
-    )
-  } catch (error) {
-    console.error(error)
-  }
+  await discordSdk.commands.authenticate({
+    access_token: data.access_token
+  })
+
+  return data.user
 }
-
-export { discordSdk }
