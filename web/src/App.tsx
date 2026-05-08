@@ -4,42 +4,66 @@ import './App.css'
 import { getDailyWord } from './game/daily'
 import type { CEFRLevel } from './game/types'
 import { validateGuess } from './game/validateGuess'
-import { isValidWord, normalizeWord } from './game/wordUtils'
+import { getRandomWord, isValidWord, normalizeWord } from './game/wordUtils'
+
+type GameMode =
+  | 'Heute'
+  | 'Training'
+  | 'Zufall'
+  | 'Wörterbuch'
+
+const MODES: GameMode[] = [
+  'Heute',
+  'Training',
+  'Zufall',
+  'Wörterbuch'
+]
 
 const LEVELS: CEFRLevel[] = ['A1', 'A2', 'B1', 'B2', 'C1']
-const WORD_LENGTHS = [5, 6, 7, 8]
+
+const KEYBOARD = [
+  ['q', 'w', 'e', 'r', 't', 'z', 'u', 'i', 'o', 'p'],
+  ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'],
+  ['Enter', 'y', 'x', 'c', 'v', 'b', 'n', 'm', '⌫']
+]
 
 function App() {
+  const [mode, setMode] = useState<GameMode>('Heute')
   const [level, setLevel] = useState<CEFRLevel>('A1')
-  const [wordLength, setWordLength] = useState(5)
   const [guess, setGuess] = useState('')
   const [guesses, setGuesses] = useState<string[]>([])
   const [results, setResults] = useState<string[][]>([])
   const [message, setMessage] = useState('')
+  const [showProgress, setShowProgress] = useState(false)
+  const [randomSeed, setRandomSeed] = useState(0)
 
-  const dailyWord = useMemo(
-    () => getDailyWord(level, wordLength),
-    [level, wordLength]
-  )
+  const targetWord = useMemo(() => {
+    if (mode === 'Zufall' || mode === 'Training') {
+      return getRandomWord(level, 5)
+    }
+
+    return getDailyWord(level, 5)
+  }, [mode, level, randomSeed])
 
   function resetGame(
-    nextLevel = level,
-    nextLength = wordLength
+    nextMode = mode,
+    nextLevel = level
   ) {
+    setMode(nextMode)
+    setLevel(nextLevel)
+    setGuess('')
     setGuesses([])
     setResults([])
-    setGuess('')
     setMessage('')
-    setLevel(nextLevel)
-    setWordLength(nextLength)
+    setRandomSeed((value) => value + 1)
   }
 
   function submitGuess() {
     const cleanGuess = normalizeWord(guess)
-    const target = normalizeWord(dailyWord.word)
+    const target = normalizeWord(targetWord.word)
 
     if (guesses.length >= 6) {
-      setMessage(`Spiel vorbei. Das Wort war: ${dailyWord.word}`)
+      setMessage(`Spiel vorbei. Das Wort war: ${targetWord.word}`)
       return
     }
 
@@ -65,43 +89,68 @@ function App() {
     if (cleanGuess === target) {
       setMessage('Richtig! 🎉')
     } else if (nextGuesses.length === 6) {
-      setMessage(`Verloren. Das Wort war: ${dailyWord.word}`)
+      setMessage(`Verloren. Das Wort war: ${targetWord.word}`)
     } else {
       setMessage('')
     }
   }
 
+  function pressKey(key: string) {
+    if (key === 'Enter') {
+      submitGuess()
+      return
+    }
+
+    if (key === '⌫') {
+      setGuess((current) => current.slice(0, -1))
+      return
+    }
+
+    if (guess.length < targetWord.word.length) {
+      setGuess((current) => current + key)
+    }
+  }
+
   return (
     <main className="app">
+      <header className="topbar">
+        <button
+          className="progress-button"
+          onClick={() => setShowProgress(true)}
+        >
+          Dein Fortschritt
+        </button>
+      </header>
+
       <h1>Wörtle</h1>
 
       <p className="subtitle">
-        Deutsches Wordle · Level {dailyWord.level} · {dailyWord.length} Buchstaben
+        Modus: {mode} · Level {targetWord.level}
       </p>
 
       <div className="settings">
         <select
-          value={level}
+          value={mode}
           onChange={(e) =>
-            resetGame(e.target.value as CEFRLevel, wordLength)
+            resetGame(e.target.value as GameMode, level)
           }
         >
-          {LEVELS.map((item) => (
+          {MODES.map((item) => (
             <option key={item} value={item}>
-              {item}
+              Modus: {item}
             </option>
           ))}
         </select>
 
         <select
-          value={wordLength}
+          value={level}
           onChange={(e) =>
-            resetGame(level, Number(e.target.value))
+            resetGame(mode, e.target.value as CEFRLevel)
           }
         >
-          {WORD_LENGTHS.map((item) => (
+          {LEVELS.map((item) => (
             <option key={item} value={item}>
-              {item} Buchstaben
+              Level: {item}
             </option>
           ))}
         </select>
@@ -111,11 +160,16 @@ function App() {
         {Array.from({ length: 6 }).map((_, rowIndex) => {
           const rowGuess = guesses[rowIndex] || ''
           const rowResult = results[rowIndex] || []
+          const isCurrentRow = rowIndex === guesses.length
 
           return (
             <div key={rowIndex} className="row">
-              {Array.from({ length: dailyWord.word.length }).map((_, colIndex) => {
-                const letter = rowGuess[colIndex] || ''
+              {Array.from({ length: targetWord.word.length }).map((_, colIndex) => {
+                const letter =
+                  rowGuess[colIndex] ||
+                  (isCurrentRow ? guess[colIndex] : '') ||
+                  ''
+
                 const state = rowResult[colIndex] || ''
 
                 return (
@@ -129,27 +183,87 @@ function App() {
         })}
       </div>
 
-      <div className="controls">
-        <input
-          type="text"
-          value={guess}
-          maxLength={dailyWord.word.length}
-          onChange={(e) => setGuess(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter') submitGuess()
-          }}
-          placeholder="Wort eingeben..."
-        />
-
-        <button onClick={submitGuess}>
-          Enter
-        </button>
+      <div className="keyboard">
+        {KEYBOARD.map((row, rowIndex) => (
+          <div key={rowIndex} className="keyboard-row">
+            {row.map((key) => (
+              <button
+                key={key}
+                className={`key ${
+                  key === 'Enter' || key === '⌫' ? 'wide' : ''
+                }`}
+                onClick={() => pressKey(key)}
+              >
+                {key}
+              </button>
+            ))}
+          </div>
+        ))}
       </div>
 
       {message && (
         <p className="message">
           {message}
         </p>
+      )}
+
+      {showProgress && (
+        <div className="modal-backdrop">
+          <div className="modal">
+            <button
+              className="close"
+              onClick={() => setShowProgress(false)}
+            >
+              ×
+            </button>
+
+            <h2>Dein Fortschritt</h2>
+
+            <p className="modal-subtitle">
+              Deine Statistiken auf einen Blick
+            </p>
+
+            <div className="login-box">
+              Melde dich an, um deinen Fortschritt zu verfolgen und deine Aktivitäts-Heatmap zu sehen!
+            </div>
+
+            <div className="stats-grid">
+              <div className="stat">
+                <span>Aktuelle Serie</span>
+                <strong>0 Tage</strong>
+              </div>
+
+              <div className="stat">
+                <span>Gewinnrate</span>
+                <strong>0%</strong>
+              </div>
+
+              <div className="stat">
+                <span>Spiele gesamt</span>
+                <strong>0</strong>
+              </div>
+
+              <div className="stat">
+                <span>Siege gesamt</span>
+                <strong>0</strong>
+              </div>
+
+              <div className="stat">
+                <span>Längste Serie</span>
+                <strong>0 Tage</strong>
+              </div>
+
+              <div className="stat">
+                <span>Zuletzt gespielt</span>
+                <strong>Nie</strong>
+              </div>
+            </div>
+
+            <div className="info-box">
+              Regelmäßiges Spielen verbessert die Worterkennung und den Wortschatz!
+            </div>
+          </div>
+        </div>
       )}
     </main>
   )
