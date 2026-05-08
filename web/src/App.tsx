@@ -4,13 +4,29 @@ import './App.css'
 import { getDailyWord } from './game/daily'
 import type { CEFRLevel } from './game/types'
 import { validateGuess, type TileState } from './game/validateGuess'
-import { getRandomWord, isValidWord, normalizeWord } from './game/wordUtils'
+import { getRandomWord, normalizeWord } from './game/wordUtils'
 import { setupDiscordAuth } from './discord'
 
-type GameMode = 'Heute' | 'Training' | 'Zufall' | 'Wörterbuch'
+type GameMode =
+  | 'Heute'
+  | 'Training'
+  | 'Zufall'
+  | 'Wörterbuch'
 
-const MODES: GameMode[] = ['Heute', 'Training', 'Zufall', 'Wörterbuch']
-const LEVELS: CEFRLevel[] = ['A1', 'A2', 'B1', 'B2', 'C1']
+const MODES: GameMode[] = [
+  'Heute',
+  'Training',
+  'Zufall',
+  'Wörterbuch'
+]
+
+const LEVELS: CEFRLevel[] = [
+  'A1',
+  'A2',
+  'B1',
+  'B2',
+  'C1'
+]
 
 const KEYBOARD = [
   ['q', 'w', 'e', 'r', 't', 'z', 'u', 'i', 'o', 'p'],
@@ -19,21 +35,35 @@ const KEYBOARD = [
 ]
 
 function App() {
-  const [discordUser, setDiscordUser] = useState<any>(null)
+  const [discordUser, setDiscordUser] =
+    useState<any>(null)
 
-  const [mode, setMode] = useState<GameMode>('Heute')
-  const [level, setLevel] = useState<CEFRLevel>('A1')
+  const [mode, setMode] =
+    useState<GameMode>('Heute')
 
-  const [guess, setGuess] = useState('')
-  const [guesses, setGuesses] = useState<string[]>([])
-  const [results, setResults] = useState<TileState[][]>([])
+  const [level, setLevel] =
+    useState<CEFRLevel>('A1')
 
-  const [message, setMessage] = useState('')
-  const [invalidGuess, setInvalidGuess] = useState(false)
-  const [gameOver, setGameOver] = useState(false)
+  const [guess, setGuess] =
+    useState('')
 
-  const [showProgress, setShowProgress] = useState(false)
-  const [randomSeed, setRandomSeed] = useState(0)
+  const [guesses, setGuesses] =
+    useState<string[]>([])
+
+  const [results, setResults] =
+    useState<TileState[][]>([])
+
+  const [message, setMessage] =
+    useState('')
+
+  const [gameOver, setGameOver] =
+    useState(false)
+
+  const [showProgress, setShowProgress] =
+    useState(false)
+
+  const [randomSeed, setRandomSeed] =
+    useState(0)
 
   useEffect(() => {
     setupDiscordAuth()
@@ -44,7 +74,10 @@ function App() {
   }, [])
 
   const targetWord = useMemo(() => {
-    if (mode === 'Heute') return getDailyWord(level, 5)
+    if (mode === 'Heute') {
+      return getDailyWord(level, 5)
+    }
+
     return getRandomWord(level, 5)
   }, [mode, level, randomSeed])
 
@@ -58,7 +91,10 @@ function App() {
 
         if (state === 'correct') {
           states[letter] = 'correct'
-        } else if (state === 'present' && oldState !== 'correct') {
+        } else if (
+          state === 'present' &&
+          oldState !== 'correct'
+        ) {
           states[letter] = 'present'
         } else if (!oldState) {
           states[letter] = 'absent'
@@ -69,45 +105,55 @@ function App() {
     return states
   }, [guesses, results])
 
-  function resetGame(nextMode = mode, nextLevel = level) {
+  function resetGame(
+    nextMode = mode,
+    nextLevel = level
+  ) {
     setMode(nextMode)
     setLevel(nextLevel)
+
     setGuess('')
     setGuesses([])
     setResults([])
     setMessage('')
-    setInvalidGuess(false)
     setGameOver(false)
+
     setRandomSeed((value) => value + 1)
   }
 
   function submitGuess() {
     if (gameOver) return
 
-    const cleanGuess = normalizeWord(guess)
-    const target = normalizeWord(targetWord.word)
+    const cleanGuess =
+      normalizeWord(guess)
+
+    const target =
+      normalizeWord(targetWord.word)
 
     if (cleanGuess.length !== target.length) {
-      setInvalidGuess(true)
-      setMessage(`Das Wort muss ${target.length} Buchstaben haben.`)
+      setMessage(
+        `Das Wort muss ${target.length} Buchstaben haben.`
+      )
+
       return
     }
 
-    if (!isValidWord(cleanGuess)) {
-      setInvalidGuess(true)
-      setMessage('Dieses Wort ist nicht in der Wörtle-Liste.')
-      return
-    }
+    const validation =
+      validateGuess(cleanGuess, target)
 
-    const validation = validateGuess(cleanGuess, target)
+    const nextGuesses = [
+      ...guesses,
+      cleanGuess
+    ]
 
-    const nextGuesses = [...guesses, cleanGuess]
-    const nextResults = [...results, validation]
+    const nextResults = [
+      ...results,
+      validation
+    ]
 
     setGuesses(nextGuesses)
     setResults(nextResults)
     setGuess('')
-    setInvalidGuess(false)
 
     if (cleanGuess === target) {
       setMessage('Richtig! 🎉')
@@ -116,7 +162,9 @@ function App() {
     }
 
     if (nextGuesses.length === 6) {
-      setMessage(`Verloren. Das Wort war: ${targetWord.word}`)
+      setMessage(
+        `Verloren. Das Wort war: ${targetWord.word}`
+      )
       setGameOver(true)
       return
     }
@@ -127,19 +175,22 @@ function App() {
   function pressKey(key: string) {
     if (gameOver) return
 
-    setInvalidGuess(false)
-
     if (key === 'Enter') {
       submitGuess()
       return
     }
 
     if (key === '⌫') {
-      setGuess((value) => value.slice(0, -1))
+      setGuess((value) =>
+        value.slice(0, -1)
+      )
       return
     }
 
-    if (guess.length < targetWord.word.length) {
+    if (
+      guess.length <
+      targetWord.word.length
+    ) {
       setGuess((value) => value + key)
     }
   }
@@ -149,10 +200,10 @@ function App() {
       <header className="header">
         <div className="brand">
           <div className="logo-grid">
-            <span className="green"></span>
-            <span></span>
-            <span className="yellow"></span>
-            <span></span>
+            <span className="green" />
+            <span />
+            <span className="yellow" />
+            <span />
           </div>
 
           <strong>Wörtle</strong>
@@ -167,9 +218,11 @@ function App() {
 
           <button
             className="progress-button"
-            onClick={() => setShowProgress(true)}
+            onClick={() =>
+              setShowProgress(true)
+            }
           >
-            Dein Fortschritt
+            Fortschritt
           </button>
         </div>
       </header>
@@ -182,28 +235,29 @@ function App() {
         <h1>Wörtle</h1>
 
         <p className="hero-text">
-          Das kostenlose tägliche Wortspiel für Deutschlernende und Muttersprachler.
+          Das tägliche deutsche Wortspiel mit CEFR-Leveln.
         </p>
-
-        <div className="chips">
-          <span>Daily Puzzle</span>
-          <span>A1–C1</span>
-          <span>Dictionary Mode</span>
-        </div>
       </section>
 
       <section className="game-card">
         <div className="controls-row">
           <label>
             Modus
+
             <select
               value={mode}
               onChange={(event) =>
-                resetGame(event.target.value as GameMode, level)
+                resetGame(
+                  event.target.value as GameMode,
+                  level
+                )
               }
             >
               {MODES.map((item) => (
-                <option key={item} value={item}>
+                <option
+                  key={item}
+                  value={item}
+                >
                   {item}
                 </option>
               ))}
@@ -212,14 +266,21 @@ function App() {
 
           <label>
             Level
+
             <select
               value={level}
               onChange={(event) =>
-                resetGame(mode, event.target.value as CEFRLevel)
+                resetGame(
+                  mode,
+                  event.target.value as CEFRLevel
+                )
               }
             >
               {LEVELS.map((item) => (
-                <option key={item} value={item}>
+                <option
+                  key={item}
+                  value={item}
+                >
                   {item}
                 </option>
               ))}
@@ -228,61 +289,76 @@ function App() {
         </div>
 
         <p className="game-info">
-          Modus: <b>{mode}</b> · Level: <b>{targetWord.level}</b>
+          Modus: <b>{mode}</b> · Level:{' '}
+          <b>{targetWord.level}</b>
         </p>
 
         <div className="board">
-          {Array.from({ length: 6 }).map((_, rowIndex) => {
-            const rowGuess = guesses[rowIndex] || ''
-            const rowResult = results[rowIndex] || []
-            const isCurrentRow = rowIndex === guesses.length
+          {Array.from({ length: 6 }).map(
+            (_, rowIndex) => {
+              const rowGuess =
+                guesses[rowIndex] || ''
 
-            return (
-              <div
-                key={rowIndex}
-                className={`row ${
-                  invalidGuess && isCurrentRow ? 'invalid-row' : ''
-                }`}
-              >
-                {Array.from({ length: targetWord.word.length }).map((_, colIndex) => {
-                  const letter =
-                    rowGuess[colIndex] ||
-                    (isCurrentRow ? guess[colIndex] : '') ||
-                    ''
+              const rowResult =
+                results[rowIndex] || []
 
-                  const state = rowResult[colIndex] || ''
+              const isCurrentRow =
+                rowIndex === guesses.length
 
-                  return (
-                    <div
-                      key={colIndex}
-                      className={`tile ${state} ${
-                        invalidGuess && isCurrentRow && letter
-                          ? 'invalid-tile'
-                          : ''
-                      }`}
-                    >
-                      {letter}
-                    </div>
-                  )
-                })}
-              </div>
-            )
-          })}
+              return (
+                <div
+                  key={rowIndex}
+                  className="row"
+                >
+                  {Array.from({
+                    length: targetWord.word.length
+                  }).map((_, colIndex) => {
+                    const letter =
+                      rowGuess[colIndex] ||
+                      (isCurrentRow
+                        ? guess[colIndex]
+                        : '') ||
+                      ''
+
+                    const state =
+                      rowResult[colIndex] || ''
+
+                    return (
+                      <div
+                        key={colIndex}
+                        className={`tile ${state}`}
+                      >
+                        {letter}
+                      </div>
+                    )
+                  })}
+                </div>
+              )
+            }
+          )}
         </div>
 
         <div className="keyboard">
           {KEYBOARD.map((row, rowIndex) => (
-            <div key={rowIndex} className="keyboard-row">
+            <div
+              key={rowIndex}
+              className="keyboard-row"
+            >
               {row.map((key) => {
-                const keyState = keyboardStates[key]
+                const keyState =
+                  keyboardStates[key]
 
                 return (
                   <button
                     key={key}
                     className={`key ${
-                      key === 'Enter' || key === '⌫' ? 'wide' : ''
+                      key === 'Enter' || key === '⌫'
+                        ? 'wide'
+                        : ''
                     } ${keyState || ''}`}
-                    onClick={() => pressKey(key)}
+                    onClick={() =>
+                      pressKey(key)
+                    }
                   >
                     {key}
                   </button>
@@ -293,7 +369,7 @@ function App() {
         </div>
 
         {message && (
-          <p className={`message ${invalidGuess ? 'error' : ''}`}>
+          <p className="message">
             {message}
           </p>
         )}
@@ -304,7 +380,9 @@ function App() {
           <div className="modal">
             <button
               className="close"
-              onClick={() => setShowProgress(false)}
+              onClick={() =>
+                setShowProgress(false)
+              }
             >
               ×
             </button>
@@ -341,20 +419,10 @@ function App() {
                 <span>Siege gesamt</span>
                 <strong>0</strong>
               </div>
-
-              <div className="stat">
-                <span>Längste Serie</span>
-                <strong>0 Tage</strong>
-              </div>
-
-              <div className="stat">
-                <span>Zuletzt gespielt</span>
-                <strong>Nie</strong>
-              </div>
             </div>
 
             <div className="info-box">
-              Regelmäßiges Spielen verbessert die Worterkennung und den Wortschatz!
+              Regelmäßiges Spielen verbessert den Wortschatz!
             </div>
           </div>
         </div>
