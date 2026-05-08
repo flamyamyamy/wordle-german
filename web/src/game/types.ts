@@ -8,4 +8,6 @@ export type CEFRLevel =
 export interface WordEntry {
   word: string
   level: CEFRLevel
+  length: number
+  category: string
 }

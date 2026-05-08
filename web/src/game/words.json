@@ -1,38 +1,3374 @@
 [
   {
+    "word": "abend",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "apfel",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "baden",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "banane",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "bett",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "blume",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "brief",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "brot",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "buch",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "danke",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
     "word": "essen",
-    "level": "A1"
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "fahren",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "farbe",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "fenster",
+    "level": "A1",
+    "length": 7,
+    "category": "basic"
+  },
+  {
+    "word": "frage",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "frau",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
   },
   {
     "word": "gehen",
-    "level": "A1"
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "geld",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "haus",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
   },
   {
     "word": "heute",
-    "level": "A1"
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
   },
   {
-    "word": "stuhl",
-    "level": "A1"
+    "word": "hilfe",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "hobby",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "hören",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "jacke",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "kaffee",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "karte",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "katze",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "kaufen",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "kind",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "klein",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "kochen",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "kommen",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "lampe",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "leben",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "lesen",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
   },
   {
     "word": "lernen",
-    "level": "A2"
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "liebe",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "machen",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "maus",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "milch",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "musik",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "nacht",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "name",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "pause",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "preis",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "radio",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "regen",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "reise",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "rufen",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "sagen",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "schule",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "sehen",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "sitzen",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "sohn",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "stadt",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "stuhl",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "suppe",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "tisch",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "trinken",
+    "level": "A1",
+    "length": 7,
+    "category": "basic"
+  },
+  {
+    "word": "uhr",
+    "level": "A1",
+    "length": 3,
+    "category": "basic"
+  },
+  {
+    "word": "vater",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "wasser",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "woche",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "wohnen",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "zimmer",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "zug",
+    "level": "A1",
+    "length": 3,
+    "category": "basic"
+  },
+  {
+    "word": "auto",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "ball",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "baum",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "bier",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "bild",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "blau",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "bruder",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "eis",
+    "level": "A1",
+    "length": 3,
+    "category": "basic"
+  },
+  {
+    "word": "fisch",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "flasche",
+    "level": "A1",
+    "length": 7,
+    "category": "basic"
+  },
+  {
+    "word": "garten",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "gelb",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "groß",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "hand",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "hund",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "jahr",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "kalt",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "kasse",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "kuchen",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "land",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "lehrer",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "mutter",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "neu",
+    "level": "A1",
+    "length": 3,
+    "category": "basic"
+  },
+  {
+    "word": "rot",
+    "level": "A1",
+    "length": 3,
+    "category": "basic"
+  },
+  {
+    "word": "schön",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "sofa",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "sonne",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "tag",
+    "level": "A1",
+    "length": 3,
+    "category": "basic"
+  },
+  {
+    "word": "tür",
+    "level": "A1",
+    "length": 3,
+    "category": "basic"
+  },
+  {
+    "word": "warm",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "weg",
+    "level": "A1",
+    "length": 3,
+    "category": "basic"
+  },
+  {
+    "word": "zeit",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "adresse",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "anfang",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "antwort",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "arbeit",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "arzt",
+    "level": "A2",
+    "length": 4,
+    "category": "everyday"
+  },
+  {
+    "word": "besuch",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "bezahlen",
+    "level": "A2",
+    "length": 8,
+    "category": "everyday"
+  },
+  {
+    "word": "bleiben",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "bringen",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "dauern",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "denken",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "drucken",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "einkauf",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "einfach",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "eltern",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "erklären",
+    "level": "A2",
+    "length": 8,
+    "category": "everyday"
+  },
+  {
+    "word": "familie",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "ferien",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "finden",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "firma",
+    "level": "A2",
+    "length": 5,
+    "category": "everyday"
+  },
+  {
+    "word": "flughafen",
+    "level": "A2",
+    "length": 9,
+    "category": "everyday"
+  },
+  {
+    "word": "fragen",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "freitag",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
   },
   {
     "word": "freund",
-    "level": "A2"
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "fühlen",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "geburt",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "gefallen",
+    "level": "A2",
+    "length": 8,
+    "category": "everyday"
+  },
+  {
+    "word": "gemeinsam",
+    "level": "A2",
+    "length": 9,
+    "category": "everyday"
+  },
+  {
+    "word": "gesund",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "gestern",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "gespräch",
+    "level": "A2",
+    "length": 8,
+    "category": "everyday"
+  },
+  {
+    "word": "gruppe",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "halb",
+    "level": "A2",
+    "length": 4,
+    "category": "everyday"
+  },
+  {
+    "word": "heizung",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "hotel",
+    "level": "A2",
+    "length": 5,
+    "category": "everyday"
+  },
+  {
+    "word": "interesse",
+    "level": "A2",
+    "length": 9,
+    "category": "everyday"
+  },
+  {
+    "word": "keller",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "kleidung",
+    "level": "A2",
+    "length": 8,
+    "category": "everyday"
+  },
+  {
+    "word": "kosten",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "küche",
+    "level": "A2",
+    "length": 5,
+    "category": "everyday"
+  },
+  {
+    "word": "laden",
+    "level": "A2",
+    "length": 5,
+    "category": "everyday"
+  },
+  {
+    "word": "leihen",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "miete",
+    "level": "A2",
+    "length": 5,
+    "category": "everyday"
+  },
+  {
+    "word": "mittag",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "morgen",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "nachbar",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "nummer",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "öffnen",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "ordnen",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "park",
+    "level": "A2",
+    "length": 4,
+    "category": "everyday"
+  },
+  {
+    "word": "planen",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "post",
+    "level": "A2",
+    "length": 4,
+    "category": "everyday"
+  },
+  {
+    "word": "putzen",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "rechnung",
+    "level": "A2",
+    "length": 8,
+    "category": "everyday"
+  },
+  {
+    "word": "reden",
+    "level": "A2",
+    "length": 5,
+    "category": "everyday"
+  },
+  {
+    "word": "reisen",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "richtig",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "samstag",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "schlafen",
+    "level": "A2",
+    "length": 8,
+    "category": "everyday"
+  },
+  {
+    "word": "schlüssel",
+    "level": "A2",
+    "length": 9,
+    "category": "everyday"
+  },
+  {
+    "word": "schreiben",
+    "level": "A2",
+    "length": 9,
+    "category": "everyday"
+  },
+  {
+    "word": "schuh",
+    "level": "A2",
+    "length": 5,
+    "category": "everyday"
+  },
+  {
+    "word": "schwester",
+    "level": "A2",
+    "length": 9,
+    "category": "everyday"
+  },
+  {
+    "word": "suchen",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "telefon",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "termin",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "ticket",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "urlaub",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "vergessen",
+    "level": "A2",
+    "length": 9,
+    "category": "everyday"
+  },
+  {
+    "word": "verkaufen",
+    "level": "A2",
+    "length": 9,
+    "category": "everyday"
+  },
+  {
+    "word": "verstehen",
+    "level": "A2",
+    "length": 9,
+    "category": "everyday"
+  },
+  {
+    "word": "warten",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "waschen",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "wecker",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "wohnung",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "zahlen",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "zeigen",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "zeitung",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "zurück",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "abendessen",
+    "level": "A2",
+    "length": 10,
+    "category": "everyday"
+  },
+  {
+    "word": "ausflug",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "bahnhof",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "besser",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "deutsch",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "dusche",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "einladung",
+    "level": "A2",
+    "length": 9,
+    "category": "everyday"
+  },
+  {
+    "word": "fehler",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "gebäude",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "gepäck",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "konto",
+    "level": "A2",
+    "length": 5,
+    "category": "everyday"
+  },
+  {
+    "word": "krank",
+    "level": "A2",
+    "length": 5,
+    "category": "everyday"
+  },
+  {
+    "word": "langsam",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "leise",
+    "level": "A2",
+    "length": 5,
+    "category": "everyday"
+  },
+  {
+    "word": "preiswert",
+    "level": "A2",
+    "length": 9,
+    "category": "everyday"
+  },
+  {
+    "word": "ruhig",
+    "level": "A2",
+    "length": 5,
+    "category": "everyday"
+  },
+  {
+    "word": "schnell",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "später",
+    "level": "A2",
+    "length": 6,
+    "category": "everyday"
+  },
+  {
+    "word": "sport",
+    "level": "A2",
+    "length": 5,
+    "category": "everyday"
+  },
+  {
+    "word": "treffen",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "abhängig",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "absicht",
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "alltag",
+    "level": "B1",
+    "length": 6,
+    "category": "intermediate"
+  },
+  {
+    "word": "anbieten",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "ändern",
+    "level": "B1",
+    "length": 6,
+    "category": "intermediate"
+  },
+  {
+    "word": "ausbildung",
+    "level": "B1",
+    "length": 10,
+    "category": "intermediate"
+  },
+  {
+    "word": "bedeutung",
+    "level": "B1",
+    "length": 9,
+    "category": "intermediate"
+  },
+  {
+    "word": "beispiel",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "bericht",
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "beruflich",
+    "level": "B1",
+    "length": 9,
+    "category": "intermediate"
+  },
+  {
+    "word": "bewerbung",
+    "level": "B1",
+    "length": 9,
+    "category": "intermediate"
+  },
+  {
+    "word": "beziehung",
+    "level": "B1",
+    "length": 9,
+    "category": "intermediate"
+  },
+  {
+    "word": "diskussion",
+    "level": "B1",
+    "length": 10,
+    "category": "intermediate"
+  },
+  {
+    "word": "eindruck",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "einfluss",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "entscheidung",
+    "level": "B1",
+    "length": 12,
+    "category": "intermediate"
+  },
+  {
+    "word": "entwicklung",
+    "level": "B1",
+    "length": 11,
+    "category": "intermediate"
+  },
+  {
+    "word": "erfahrung",
+    "level": "B1",
+    "length": 9,
+    "category": "intermediate"
+  },
+  {
+    "word": "erfolg",
+    "level": "B1",
+    "length": 6,
+    "category": "intermediate"
+  },
+  {
+    "word": "erinnern",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "erlauben",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "erzählen",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "erziehen",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "fähigkeit",
+    "level": "B1",
+    "length": 9,
+    "category": "intermediate"
+  },
+  {
+    "word": "feier",
+    "level": "B1",
+    "length": 5,
+    "category": "intermediate"
+  },
+  {
+    "word": "freiheit",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "gefühl",
+    "level": "B1",
+    "length": 6,
+    "category": "intermediate"
+  },
+  {
+    "word": "gefahr",
+    "level": "B1",
+    "length": 6,
+    "category": "intermediate"
+  },
+  {
+    "word": "gemeinde",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "gerät",
+    "level": "B1",
+    "length": 5,
+    "category": "intermediate"
+  },
+  {
+    "word": "geschichte",
+    "level": "B1",
+    "length": 10,
+    "category": "intermediate"
+  },
+  {
+    "word": "gesellschaft",
+    "level": "B1",
+    "length": 12,
+    "category": "intermediate"
+  },
+  {
+    "word": "gesetz",
+    "level": "B1",
+    "length": 6,
+    "category": "intermediate"
+  },
+  {
+    "word": "gewohnheit",
+    "level": "B1",
+    "length": 10,
+    "category": "intermediate"
+  },
+  {
+    "word": "glauben",
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "grund",
+    "level": "B1",
+    "length": 5,
+    "category": "intermediate"
+  },
+  {
+    "word": "handeln",
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "haushalt",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "hinweis",
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "hoffnung",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "inhalt",
+    "level": "B1",
+    "length": 6,
+    "category": "intermediate"
+  },
+  {
+    "word": "kenntnis",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "klären",
+    "level": "B1",
+    "length": 6,
+    "category": "intermediate"
+  },
+  {
+    "word": "kontakt",
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "kultur",
+    "level": "B1",
+    "length": 6,
+    "category": "intermediate"
+  },
+  {
+    "word": "lösung",
+    "level": "B1",
+    "length": 6,
+    "category": "intermediate"
+  },
+  {
+    "word": "meinung",
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "möglich",
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "nachricht",
+    "level": "B1",
+    "length": 9,
+    "category": "intermediate"
+  },
+  {
+    "word": "nachteil",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "nutzen",
+    "level": "B1",
+    "length": 6,
+    "category": "intermediate"
+  },
+  {
+    "word": "ordnung",
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "pflanze",
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "pflicht",
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "problem",
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "prüfung",
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "regel",
+    "level": "B1",
+    "length": 5,
+    "category": "intermediate"
+  },
+  {
+    "word": "richtung",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "schaden",
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "schaffen",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "situation",
+    "level": "B1",
+    "length": 9,
+    "category": "intermediate"
   },
   {
     "word": "sprache",
-    "level": "B1"
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "stärke",
+    "level": "B1",
+    "length": 6,
+    "category": "intermediate"
+  },
+  {
+    "word": "teilnehmen",
+    "level": "B1",
+    "length": 10,
+    "category": "intermediate"
+  },
+  {
+    "word": "umwelt",
+    "level": "B1",
+    "length": 6,
+    "category": "intermediate"
+  },
+  {
+    "word": "unfall",
+    "level": "B1",
+    "length": 6,
+    "category": "intermediate"
+  },
+  {
+    "word": "verein",
+    "level": "B1",
+    "length": 6,
+    "category": "intermediate"
+  },
+  {
+    "word": "vergleich",
+    "level": "B1",
+    "length": 9,
+    "category": "intermediate"
+  },
+  {
+    "word": "verhalten",
+    "level": "B1",
+    "length": 9,
+    "category": "intermediate"
+  },
+  {
+    "word": "vermeiden",
+    "level": "B1",
+    "length": 9,
+    "category": "intermediate"
+  },
+  {
+    "word": "vorschlag",
+    "level": "B1",
+    "length": 9,
+    "category": "intermediate"
+  },
+  {
+    "word": "wählen",
+    "level": "B1",
+    "length": 6,
+    "category": "intermediate"
+  },
+  {
+    "word": "wirkung",
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "wissen",
+    "level": "B1",
+    "length": 6,
+    "category": "intermediate"
+  },
+  {
+    "word": "wunsch",
+    "level": "B1",
+    "length": 6,
+    "category": "intermediate"
+  },
+  {
+    "word": "zusammen",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "zweifel",
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "auftrag",
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "ausdruck",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "beitrag",
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "bereich",
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "chancen",
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "dokument",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "ehrlich",
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "einheit",
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "energie",
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "ergebnis",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "ernährung",
+    "level": "B1",
+    "length": 9,
+    "category": "intermediate"
+  },
+  {
+    "word": "folge",
+    "level": "B1",
+    "length": 5,
+    "category": "intermediate"
+  },
+  {
+    "word": "geduld",
+    "level": "B1",
+    "length": 6,
+    "category": "intermediate"
+  },
+  {
+    "word": "gelegenheit",
+    "level": "B1",
+    "length": 11,
+    "category": "intermediate"
+  },
+  {
+    "word": "grenze",
+    "level": "B1",
+    "length": 6,
+    "category": "intermediate"
+  },
+  {
+    "word": "haltung",
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "konflikt",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "leistung",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "material",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "methode",
+    "level": "B1",
+    "length": 7,
+    "category": "intermediate"
+  },
+  {
+    "word": "mittel",
+    "level": "B1",
+    "length": 6,
+    "category": "intermediate"
+  },
+  {
+    "word": "abbrechen",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "abweichen",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "akzeptanz",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
   },
   {
     "word": "analyse",
-    "level": "B2"
+    "level": "B2",
+    "length": 7,
+    "category": "advanced"
+  },
+  {
+    "word": "anspruch",
+    "level": "B2",
+    "length": 8,
+    "category": "advanced"
+  },
+  {
+    "word": "argument",
+    "level": "B2",
+    "length": 8,
+    "category": "advanced"
+  },
+  {
+    "word": "ausgleich",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "ausnahme",
+    "level": "B2",
+    "length": 8,
+    "category": "advanced"
+  },
+  {
+    "word": "bedingung",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "befassen",
+    "level": "B2",
+    "length": 8,
+    "category": "advanced"
+  },
+  {
+    "word": "begriff",
+    "level": "B2",
+    "length": 7,
+    "category": "advanced"
+  },
+  {
+    "word": "belegen",
+    "level": "B2",
+    "length": 7,
+    "category": "advanced"
+  },
+  {
+    "word": "belastung",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "beratung",
+    "level": "B2",
+    "length": 8,
+    "category": "advanced"
+  },
+  {
+    "word": "bewerten",
+    "level": "B2",
+    "length": 8,
+    "category": "advanced"
+  },
+  {
+    "word": "bildung",
+    "level": "B2",
+    "length": 7,
+    "category": "advanced"
+  },
+  {
+    "word": "darstellen",
+    "level": "B2",
+    "length": 10,
+    "category": "advanced"
+  },
+  {
+    "word": "deutlich",
+    "level": "B2",
+    "length": 8,
+    "category": "advanced"
+  },
+  {
+    "word": "ebene",
+    "level": "B2",
+    "length": 5,
+    "category": "advanced"
+  },
+  {
+    "word": "einführen",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "einschätzen",
+    "level": "B2",
+    "length": 11,
+    "category": "advanced"
+  },
+  {
+    "word": "einwand",
+    "level": "B2",
+    "length": 7,
+    "category": "advanced"
+  },
+  {
+    "word": "empfehlen",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "entwerfen",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "erfordern",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "erfüllen",
+    "level": "B2",
+    "length": 8,
+    "category": "advanced"
+  },
+  {
+    "word": "erheben",
+    "level": "B2",
+    "length": 7,
+    "category": "advanced"
+  },
+  {
+    "word": "ersetzen",
+    "level": "B2",
+    "length": 8,
+    "category": "advanced"
+  },
+  {
+    "word": "erweitern",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "fachlich",
+    "level": "B2",
+    "length": 8,
+    "category": "advanced"
+  },
+  {
+    "word": "fördern",
+    "level": "B2",
+    "length": 7,
+    "category": "advanced"
+  },
+  {
+    "word": "folgerung",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "funktion",
+    "level": "B2",
+    "length": 8,
+    "category": "advanced"
+  },
+  {
+    "word": "geeignet",
+    "level": "B2",
+    "length": 8,
+    "category": "advanced"
+  },
+  {
+    "word": "gegenüber",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "gestalten",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "gewähr",
+    "level": "B2",
+    "length": 6,
+    "category": "advanced"
+  },
+  {
+    "word": "hinweisen",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "kritisch",
+    "level": "B2",
+    "length": 8,
+    "category": "advanced"
+  },
+  {
+    "word": "maßnahme",
+    "level": "B2",
+    "length": 8,
+    "category": "advanced"
+  },
+  {
+    "word": "nachweisen",
+    "level": "B2",
+    "length": 10,
+    "category": "advanced"
+  },
+  {
+    "word": "nachvollziehen",
+    "level": "B2",
+    "length": 14,
+    "category": "advanced"
+  },
+  {
+    "word": "objektiv",
+    "level": "B2",
+    "length": 8,
+    "category": "advanced"
+  },
+  {
+    "word": "potenzial",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "prinzip",
+    "level": "B2",
+    "length": 7,
+    "category": "advanced"
+  },
+  {
+    "word": "prozess",
+    "level": "B2",
+    "length": 7,
+    "category": "advanced"
+  },
+  {
+    "word": "qualität",
+    "level": "B2",
+    "length": 8,
+    "category": "advanced"
+  },
+  {
+    "word": "rahmen",
+    "level": "B2",
+    "length": 6,
+    "category": "advanced"
+  },
+  {
+    "word": "reagieren",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "relevant",
+    "level": "B2",
+    "length": 8,
+    "category": "advanced"
+  },
+  {
+    "word": "ressource",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "schätzung",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "strategie",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "struktur",
+    "level": "B2",
+    "length": 8,
+    "category": "advanced"
+  },
+  {
+    "word": "tendenz",
+    "level": "B2",
+    "length": 7,
+    "category": "advanced"
+  },
+  {
+    "word": "theorie",
+    "level": "B2",
+    "length": 7,
+    "category": "advanced"
+  },
+  {
+    "word": "umsetzen",
+    "level": "B2",
+    "length": 8,
+    "category": "advanced"
+  },
+  {
+    "word": "umstand",
+    "level": "B2",
+    "length": 7,
+    "category": "advanced"
+  },
+  {
+    "word": "verändern",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "verlauf",
+    "level": "B2",
+    "length": 7,
+    "category": "advanced"
+  },
+  {
+    "word": "vermitteln",
+    "level": "B2",
+    "length": 10,
+    "category": "advanced"
+  },
+  {
+    "word": "vermutlich",
+    "level": "B2",
+    "length": 10,
+    "category": "advanced"
+  },
+  {
+    "word": "voraussetzung",
+    "level": "B2",
+    "length": 13,
+    "category": "advanced"
+  },
+  {
+    "word": "wahrnehmen",
+    "level": "B2",
+    "length": 10,
+    "category": "advanced"
+  },
+  {
+    "word": "wirtschaft",
+    "level": "B2",
+    "length": 10,
+    "category": "advanced"
+  },
+  {
+    "word": "zusammenhang",
+    "level": "B2",
+    "length": 12,
+    "category": "advanced"
+  },
+  {
+    "word": "zweck",
+    "level": "B2",
+    "length": 5,
+    "category": "advanced"
+  },
+  {
+    "word": "ansatz",
+    "level": "B2",
+    "length": 6,
+    "category": "advanced"
+  },
+  {
+    "word": "aspekt",
+    "level": "B2",
+    "length": 6,
+    "category": "advanced"
+  },
+  {
+    "word": "aufwand",
+    "level": "B2",
+    "length": 7,
+    "category": "advanced"
+  },
+  {
+    "word": "auswirkung",
+    "level": "B2",
+    "length": 10,
+    "category": "advanced"
+  },
+  {
+    "word": "bewusstsein",
+    "level": "B2",
+    "length": 11,
+    "category": "advanced"
+  },
+  {
+    "word": "definieren",
+    "level": "B2",
+    "length": 10,
+    "category": "advanced"
+  },
+  {
+    "word": "einordnung",
+    "level": "B2",
+    "length": 10,
+    "category": "advanced"
+  },
+  {
+    "word": "erläutern",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "faktor",
+    "level": "B2",
+    "length": 6,
+    "category": "advanced"
+  },
+  {
+    "word": "handlung",
+    "level": "B2",
+    "length": 8,
+    "category": "advanced"
+  },
+  {
+    "word": "kompetenz",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "konkret",
+    "level": "B2",
+    "length": 7,
+    "category": "advanced"
+  },
+  {
+    "word": "kriterium",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "mangel",
+    "level": "B2",
+    "length": 6,
+    "category": "advanced"
+  },
+  {
+    "word": "perspektive",
+    "level": "B2",
+    "length": 11,
+    "category": "advanced"
+  },
+  {
+    "word": "präzise",
+    "level": "B2",
+    "length": 7,
+    "category": "advanced"
+  },
+  {
+    "word": "priorität",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "reflexion",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "sachlich",
+    "level": "B2",
+    "length": 8,
+    "category": "advanced"
+  },
+  {
+    "word": "standard",
+    "level": "B2",
+    "length": 8,
+    "category": "advanced"
+  },
+  {
+    "word": "umfang",
+    "level": "B2",
+    "length": 6,
+    "category": "advanced"
+  },
+  {
+    "word": "verfügbar",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "verfahren",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "verhältnis",
+    "level": "B2",
+    "length": 10,
+    "category": "advanced"
+  },
+  {
+    "word": "wissenschaft",
+    "level": "B2",
+    "length": 12,
+    "category": "advanced"
+  },
+  {
+    "word": "abstrakt",
+    "level": "C1",
+    "length": 8,
+    "category": "academic"
+  },
+  {
+    "word": "ambivalent",
+    "level": "C1",
+    "length": 10,
+    "category": "academic"
+  },
+  {
+    "word": "anschaulich",
+    "level": "C1",
+    "length": 11,
+    "category": "academic"
+  },
+  {
+    "word": "auslegung",
+    "level": "C1",
+    "length": 9,
+    "category": "academic"
+  },
+  {
+    "word": "authentisch",
+    "level": "C1",
+    "length": 11,
+    "category": "academic"
+  },
+  {
+    "word": "beeinflussen",
+    "level": "C1",
+    "length": 12,
+    "category": "academic"
+  },
+  {
+    "word": "begründung",
+    "level": "C1",
+    "length": 10,
+    "category": "academic"
+  },
+  {
+    "word": "debatte",
+    "level": "C1",
+    "length": 7,
+    "category": "academic"
+  },
+  {
+    "word": "differenz",
+    "level": "C1",
+    "length": 9,
+    "category": "academic"
   },
   {
     "word": "diskurs",
-    "level": "C1"
+    "level": "C1",
+    "length": 7,
+    "category": "academic"
+  },
+  {
+    "word": "effizienz",
+    "level": "C1",
+    "length": 9,
+    "category": "academic"
+  },
+  {
+    "word": "einschränkung",
+    "level": "C1",
+    "length": 13,
+    "category": "academic"
+  },
+  {
+    "word": "empirisch",
+    "level": "C1",
+    "length": 9,
+    "category": "academic"
+  },
+  {
+    "word": "erkenntnis",
+    "level": "C1",
+    "length": 10,
+    "category": "academic"
+  },
+  {
+    "word": "ethisch",
+    "level": "C1",
+    "length": 7,
+    "category": "academic"
+  },
+  {
+    "word": "fundiert",
+    "level": "C1",
+    "length": 8,
+    "category": "academic"
+  },
+  {
+    "word": "gegenstand",
+    "level": "C1",
+    "length": 10,
+    "category": "academic"
+  },
+  {
+    "word": "gewichtung",
+    "level": "C1",
+    "length": 10,
+    "category": "academic"
+  },
+  {
+    "word": "hypothese",
+    "level": "C1",
+    "length": 9,
+    "category": "academic"
+  },
+  {
+    "word": "implizit",
+    "level": "C1",
+    "length": 8,
+    "category": "academic"
+  },
+  {
+    "word": "indiz",
+    "level": "C1",
+    "length": 5,
+    "category": "academic"
+  },
+  {
+    "word": "interpretation",
+    "level": "C1",
+    "length": 14,
+    "category": "academic"
+  },
+  {
+    "word": "konsequent",
+    "level": "C1",
+    "length": 10,
+    "category": "academic"
+  },
+  {
+    "word": "kontext",
+    "level": "C1",
+    "length": 7,
+    "category": "academic"
+  },
+  {
+    "word": "konzept",
+    "level": "C1",
+    "length": 7,
+    "category": "academic"
+  },
+  {
+    "word": "legitim",
+    "level": "C1",
+    "length": 7,
+    "category": "academic"
+  },
+  {
+    "word": "nachhaltig",
+    "level": "C1",
+    "length": 10,
+    "category": "academic"
+  },
+  {
+    "word": "normativ",
+    "level": "C1",
+    "length": 8,
+    "category": "academic"
+  },
+  {
+    "word": "paradigma",
+    "level": "C1",
+    "length": 9,
+    "category": "academic"
+  },
+  {
+    "word": "plausibel",
+    "level": "C1",
+    "length": 9,
+    "category": "academic"
+  },
+  {
+    "word": "prägnant",
+    "level": "C1",
+    "length": 8,
+    "category": "academic"
+  },
+  {
+    "word": "prämisse",
+    "level": "C1",
+    "length": 8,
+    "category": "academic"
+  },
+  {
+    "word": "relevanz",
+    "level": "C1",
+    "length": 8,
+    "category": "academic"
+  },
+  {
+    "word": "resonanz",
+    "level": "C1",
+    "length": 8,
+    "category": "academic"
+  },
+  {
+    "word": "schlüssig",
+    "level": "C1",
+    "length": 9,
+    "category": "academic"
+  },
+  {
+    "word": "souverän",
+    "level": "C1",
+    "length": 8,
+    "category": "academic"
+  },
+  {
+    "word": "spezifisch",
+    "level": "C1",
+    "length": 10,
+    "category": "academic"
+  },
+  {
+    "word": "subjektiv",
+    "level": "C1",
+    "length": 9,
+    "category": "academic"
+  },
+  {
+    "word": "tendenziell",
+    "level": "C1",
+    "length": 11,
+    "category": "academic"
+  },
+  {
+    "word": "transparenz",
+    "level": "C1",
+    "length": 11,
+    "category": "academic"
+  },
+  {
+    "word": "umfassend",
+    "level": "C1",
+    "length": 9,
+    "category": "academic"
+  },
+  {
+    "word": "verbindlich",
+    "level": "C1",
+    "length": 11,
+    "category": "academic"
+  },
+  {
+    "word": "verdichten",
+    "level": "C1",
+    "length": 10,
+    "category": "academic"
+  },
+  {
+    "word": "verorten",
+    "level": "C1",
+    "length": 8,
+    "category": "academic"
+  },
+  {
+    "word": "widerspruch",
+    "level": "C1",
+    "length": 11,
+    "category": "academic"
+  },
+  {
+    "word": "zugrunde",
+    "level": "C1",
+    "length": 8,
+    "category": "academic"
+  },
+  {
+    "word": "ambiguität",
+    "level": "C1",
+    "length": 10,
+    "category": "academic"
+  },
+  {
+    "word": "argumentation",
+    "level": "C1",
+    "length": 13,
+    "category": "academic"
+  },
+  {
+    "word": "differenziert",
+    "level": "C1",
+    "length": 13,
+    "category": "academic"
+  },
+  {
+    "word": "diskrepanz",
+    "level": "C1",
+    "length": 10,
+    "category": "academic"
+  },
+  {
+    "word": "dynamik",
+    "level": "C1",
+    "length": 7,
+    "category": "academic"
+  },
+  {
+    "word": "eindeutig",
+    "level": "C1",
+    "length": 9,
+    "category": "academic"
+  },
+  {
+    "word": "elaboriert",
+    "level": "C1",
+    "length": 10,
+    "category": "academic"
+  },
+  {
+    "word": "essentiell",
+    "level": "C1",
+    "length": 10,
+    "category": "academic"
+  },
+  {
+    "word": "fundament",
+    "level": "C1",
+    "length": 9,
+    "category": "academic"
+  },
+  {
+    "word": "implikation",
+    "level": "C1",
+    "length": 11,
+    "category": "academic"
+  },
+  {
+    "word": "inferenz",
+    "level": "C1",
+    "length": 8,
+    "category": "academic"
+  },
+  {
+    "word": "instanz",
+    "level": "C1",
+    "length": 7,
+    "category": "academic"
+  },
+  {
+    "word": "integrität",
+    "level": "C1",
+    "length": 10,
+    "category": "academic"
+  },
+  {
+    "word": "interaktion",
+    "level": "C1",
+    "length": 11,
+    "category": "academic"
+  },
+  {
+    "word": "konsens",
+    "level": "C1",
+    "length": 7,
+    "category": "academic"
+  },
+  {
+    "word": "kontroverse",
+    "level": "C1",
+    "length": 11,
+    "category": "academic"
+  },
+  {
+    "word": "legitimation",
+    "level": "C1",
+    "length": 12,
+    "category": "academic"
+  },
+  {
+    "word": "nuanciert",
+    "level": "C1",
+    "length": 9,
+    "category": "academic"
+  },
+  {
+    "word": "objektivität",
+    "level": "C1",
+    "length": 12,
+    "category": "academic"
+  },
+  {
+    "word": "perspektivisch",
+    "level": "C1",
+    "length": 14,
+    "category": "academic"
+  },
+  {
+    "word": "phänomen",
+    "level": "C1",
+    "length": 8,
+    "category": "academic"
+  },
+  {
+    "word": "positionierung",
+    "level": "C1",
+    "length": 14,
+    "category": "academic"
+  },
+  {
+    "word": "präzisierung",
+    "level": "C1",
+    "length": 12,
+    "category": "academic"
+  },
+  {
+    "word": "proportional",
+    "level": "C1",
+    "length": 12,
+    "category": "academic"
+  },
+  {
+    "word": "rekonstruktion",
+    "level": "C1",
+    "length": 14,
+    "category": "academic"
+  },
+  {
+    "word": "relation",
+    "level": "C1",
+    "length": 8,
+    "category": "academic"
+  },
+  {
+    "word": "repräsentativ",
+    "level": "C1",
+    "length": 13,
+    "category": "academic"
+  },
+  {
+    "word": "restriktion",
+    "level": "C1",
+    "length": 11,
+    "category": "academic"
+  },
+  {
+    "word": "semantik",
+    "level": "C1",
+    "length": 8,
+    "category": "academic"
+  },
+  {
+    "word": "synthese",
+    "level": "C1",
+    "length": 8,
+    "category": "academic"
+  },
+  {
+    "word": "theoretisch",
+    "level": "C1",
+    "length": 11,
+    "category": "academic"
+  },
+  {
+    "word": "validität",
+    "level": "C1",
+    "length": 9,
+    "category": "academic"
+  },
+  {
+    "word": "variabel",
+    "level": "C1",
+    "length": 8,
+    "category": "academic"
+  },
+  {
+    "word": "verallgemeinern",
+    "level": "C1",
+    "length": 15,
+    "category": "academic"
+  },
+  {
+    "word": "verknüpfen",
+    "level": "C1",
+    "length": 10,
+    "category": "academic"
+  },
+  {
+    "word": "wahrnehmung",
+    "level": "C1",
+    "length": 11,
+    "category": "academic"
+  },
+  {
+    "word": "wechselwirkung",
+    "level": "C1",
+    "length": 14,
+    "category": "academic"
+  },
+  {
+    "word": "widerlegen",
+    "level": "C1",
+    "length": 10,
+    "category": "academic"
+  },
+  {
+    "word": "zuspitzen",
+    "level": "C1",
+    "length": 9,
+    "category": "academic"
+  },
+  {
+    "word": "zwiespalt",
+    "level": "C1",
+    "length": 9,
+    "category": "academic"
+  },
+  {
+    "word": "abgrenzung",
+    "level": "C1",
+    "length": 10,
+    "category": "academic"
+  },
+  {
+    "word": "diskursiv",
+    "level": "C1",
+    "length": 9,
+    "category": "academic"
+  },
+  {
+    "word": "exemplarisch",
+    "level": "C1",
+    "length": 12,
+    "category": "academic"
+  },
+  {
+    "word": "herausforderung",
+    "level": "C1",
+    "length": 15,
+    "category": "academic"
+  },
+  {
+    "word": "inkonsistent",
+    "level": "C1",
+    "length": 12,
+    "category": "academic"
+  },
+  {
+    "word": "kohärenz",
+    "level": "C1",
+    "length": 8,
+    "category": "academic"
+  },
+  {
+    "word": "komplexität",
+    "level": "C1",
+    "length": 11,
+    "category": "academic"
+  },
+  {
+    "word": "reflektieren",
+    "level": "C1",
+    "length": 12,
+    "category": "academic"
+  },
+  {
+    "word": "substanziell",
+    "level": "C1",
+    "length": 12,
+    "category": "academic"
+  },
+  {
+    "word": "terminologie",
+    "level": "C1",
+    "length": 12,
+    "category": "academic"
+  },
+  {
+    "word": "veranschaulichen",
+    "level": "C1",
+    "length": 16,
+    "category": "academic"
+  },
+  {
+    "word": "laufen",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "spielen",
+    "level": "A1",
+    "length": 7,
+    "category": "basic"
+  },
+  {
+    "word": "malen",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "tanzen",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "singen",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "geben",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "nehmen",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "helfen",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "tragen",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "hunger",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "durst",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "winter",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "sommer",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "früh",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "spät",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "links",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "rechts",
+    "level": "A1",
+    "length": 6,
+    "category": "basic"
+  },
+  {
+    "word": "unten",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "oben",
+    "level": "A1",
+    "length": 4,
+    "category": "basic"
+  },
+  {
+    "word": "markt",
+    "level": "A1",
+    "length": 5,
+    "category": "basic"
+  },
+  {
+    "word": "apotheke",
+    "level": "A1",
+    "length": 8,
+    "category": "basic"
+  },
+  {
+    "word": "anrufen",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "abholen",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "ausfüllen",
+    "level": "A2",
+    "length": 9,
+    "category": "everyday"
+  },
+  {
+    "word": "besuchen",
+    "level": "A2",
+    "length": 8,
+    "category": "everyday"
+  },
+  {
+    "word": "bestellen",
+    "level": "A2",
+    "length": 9,
+    "category": "everyday"
+  },
+  {
+    "word": "einsteigen",
+    "level": "A2",
+    "length": 10,
+    "category": "everyday"
+  },
+  {
+    "word": "umsteigen",
+    "level": "A2",
+    "length": 9,
+    "category": "everyday"
+  },
+  {
+    "word": "aussteigen",
+    "level": "A2",
+    "length": 10,
+    "category": "everyday"
+  },
+  {
+    "word": "erleben",
+    "level": "A2",
+    "length": 7,
+    "category": "everyday"
+  },
+  {
+    "word": "erreichen",
+    "level": "A2",
+    "length": 9,
+    "category": "everyday"
+  },
+  {
+    "word": "erwarten",
+    "level": "A2",
+    "length": 8,
+    "category": "everyday"
+  },
+  {
+    "word": "genießen",
+    "level": "A2",
+    "length": 8,
+    "category": "everyday"
+  },
+  {
+    "word": "gratulieren",
+    "level": "A2",
+    "length": 11,
+    "category": "everyday"
+  },
+  {
+    "word": "mitbringen",
+    "level": "A2",
+    "length": 10,
+    "category": "everyday"
+  },
+  {
+    "word": "probieren",
+    "level": "A2",
+    "length": 9,
+    "category": "everyday"
+  },
+  {
+    "word": "reservieren",
+    "level": "A2",
+    "length": 11,
+    "category": "everyday"
+  },
+  {
+    "word": "vorbereiten",
+    "level": "A2",
+    "length": 11,
+    "category": "everyday"
+  },
+  {
+    "word": "begründen",
+    "level": "B1",
+    "length": 9,
+    "category": "intermediate"
+  },
+  {
+    "word": "beschreiben",
+    "level": "B1",
+    "length": 11,
+    "category": "intermediate"
+  },
+  {
+    "word": "beweisen",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "empfinden",
+    "level": "B1",
+    "length": 9,
+    "category": "intermediate"
+  },
+  {
+    "word": "entdecken",
+    "level": "B1",
+    "length": 9,
+    "category": "intermediate"
+  },
+  {
+    "word": "entscheiden",
+    "level": "B1",
+    "length": 11,
+    "category": "intermediate"
+  },
+  {
+    "word": "erkennen",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "erwähnen",
+    "level": "B1",
+    "length": 8,
+    "category": "intermediate"
+  },
+  {
+    "word": "festlegen",
+    "level": "B1",
+    "length": 9,
+    "category": "intermediate"
+  },
+  {
+    "word": "vergleichen",
+    "level": "B1",
+    "length": 11,
+    "category": "intermediate"
+  },
+  {
+    "word": "verbessern",
+    "level": "B1",
+    "length": 10,
+    "category": "intermediate"
+  },
+  {
+    "word": "verhindern",
+    "level": "B1",
+    "length": 10,
+    "category": "intermediate"
+  },
+  {
+    "word": "vorstellen",
+    "level": "B1",
+    "length": 10,
+    "category": "intermediate"
+  },
+  {
+    "word": "zustimmen",
+    "level": "B1",
+    "length": 9,
+    "category": "intermediate"
+  },
+  {
+    "word": "abschätzen",
+    "level": "B2",
+    "length": 10,
+    "category": "advanced"
+  },
+  {
+    "word": "anwenden",
+    "level": "B2",
+    "length": 8,
+    "category": "advanced"
+  },
+  {
+    "word": "auswerten",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "begrenzen",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "beurteilen",
+    "level": "B2",
+    "length": 10,
+    "category": "advanced"
+  },
+  {
+    "word": "einordnen",
+    "level": "B2",
+    "length": 9,
+    "category": "advanced"
+  },
+  {
+    "word": "entwickeln",
+    "level": "B2",
+    "length": 10,
+    "category": "advanced"
+  },
+  {
+    "word": "formulieren",
+    "level": "B2",
+    "length": 11,
+    "category": "advanced"
+  },
+  {
+    "word": "hinterfragen",
+    "level": "B2",
+    "length": 12,
+    "category": "advanced"
+  },
+  {
+    "word": "optimieren",
+    "level": "B2",
+    "length": 10,
+    "category": "advanced"
+  },
+  {
+    "word": "reduzieren",
+    "level": "B2",
+    "length": 10,
+    "category": "advanced"
+  },
+  {
+    "word": "übertragen",
+    "level": "B2",
+    "length": 10,
+    "category": "advanced"
+  },
+  {
+    "word": "unterscheiden",
+    "level": "B2",
+    "length": 13,
+    "category": "advanced"
+  },
+  {
+    "word": "zusammenfassen",
+    "level": "B2",
+    "length": 14,
+    "category": "advanced"
+  },
+  {
+    "word": "abstrahieren",
+    "level": "C1",
+    "length": 12,
+    "category": "academic"
+  },
+  {
+    "word": "analysieren",
+    "level": "C1",
+    "length": 11,
+    "category": "academic"
+  },
+  {
+    "word": "charakterisieren",
+    "level": "C1",
+    "length": 16,
+    "category": "academic"
+  },
+  {
+    "word": "differenzieren",
+    "level": "C1",
+    "length": 14,
+    "category": "academic"
+  },
+  {
+    "word": "evaluieren",
+    "level": "C1",
+    "length": 10,
+    "category": "academic"
+  },
+  {
+    "word": "illustrieren",
+    "level": "C1",
+    "length": 12,
+    "category": "academic"
+  },
+  {
+    "word": "implizieren",
+    "level": "C1",
+    "length": 11,
+    "category": "academic"
+  },
+  {
+    "word": "konstruieren",
+    "level": "C1",
+    "length": 12,
+    "category": "academic"
+  },
+  {
+    "word": "legitimieren",
+    "level": "C1",
+    "length": 12,
+    "category": "academic"
+  },
+  {
+    "word": "problematisieren",
+    "level": "C1",
+    "length": 16,
+    "category": "academic"
+  },
+  {
+    "word": "relativieren",
+    "level": "C1",
+    "length": 12,
+    "category": "academic"
+  },
+  {
+    "word": "thematisieren",
+    "level": "C1",
+    "length": 13,
+    "category": "academic"
   }
 ]

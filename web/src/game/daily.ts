@@ -1,15 +1,31 @@
-import words from './words.json'
+import type { CEFRLevel } from './types'
+import { getFilteredWords, getWordsByLevel } from './wordUtils'
 
-export function getDailyWord() {
+function getDateHash(value: string) {
+  let hash = 0
+
+  for (let i = 0; i < value.length; i++) {
+    hash = (hash * 31 + value.charCodeAt(i)) >>> 0
+  }
+
+  return hash
+}
+
+export function getDailyWord(
+  level: CEFRLevel = 'A1',
+  length = 5
+) {
   const today = new Date()
     .toISOString()
     .split('T')[0]
 
-  let hash = 0
+  let candidates = getFilteredWords(level, length)
 
-  for (let i = 0; i < today.length; i++) {
-    hash += today.charCodeAt(i)
+  if (candidates.length === 0) {
+    candidates = getWordsByLevel(level)
   }
 
-  return words[hash % words.length]
+  const hash = getDateHash(`${today}-${level}-${length}`)
+
+  return candidates[hash % candidates.length]
 }
