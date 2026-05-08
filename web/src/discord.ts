@@ -1,11 +1,33 @@
 import { DiscordSDK } from '@discord/embedded-app-sdk'
 
-export const discordSdk = new DiscordSDK(
+const clientId =
   import.meta.env.VITE_DISCORD_CLIENT_ID
-)
+
+export const discordSdk =
+  clientId
+    ? new DiscordSDK(clientId)
+    : null
 
 export async function setupDiscord() {
-  await discordSdk.ready()
+  if (!discordSdk) {
+    console.log(
+      'No Discord Client ID found'
+    )
 
-  console.log('Discord Activity Ready')
+    return
+  }
+
+  try {
+    await discordSdk.ready()
+
+    console.log(
+      'Discord Activity Ready'
+    )
+  } catch (error) {
+    console.log(
+      'Discord SDK only works inside Discord'
+    )
+
+    console.error(error)
+  }
 }
